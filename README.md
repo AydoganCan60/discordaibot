@@ -1,3 +1,6 @@
+
+Google Gemini AI ile güçlendirilmiş, konuşma geçmişini hatırlayan akıllı Discord botu. Türkçe dil desteği ve gelişmiş güvenlik özellikleri ile donatılmıştır.
+
 ✨ Özellikler:
 🧠 AI Entegrasyonu
 
