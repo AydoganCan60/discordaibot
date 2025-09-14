@@ -69,13 +69,13 @@ def add_to_memory(memory_key: str, user_message: str, ai_response: str):
     if len(conversation_memory[memory_key]) > MAX_MEMORY_MESSAGES:
         conversation_memory[memory_key] = conversation_memory[memory_key][-MAX_MEMORY_MESSAGES:]
 
-@bot.command(name='kodlaai')
+@bot.command(name='sor')
 @commands.cooldown(1, 3, commands.BucketType.user)  # 3 saniyede 1 komut
-async def kodlaai(ctx, *, mesaj: str = ""):
-    """AI ile sohbet et - !kodlaai [mesajın]"""
+async def sor(ctx, *, mesaj: str = ""):
+    """AI ile sohbet et - !sor [mesajın]"""
     
     if not mesaj:
-        await ctx.send("Lütfen bir mesaj yazın! Örnek: `!kodlaai Python hakkında bilgi ver`")
+        await ctx.send("Lütfen bir mesaj yazın! Örnek: `!sor Python hakkında bilgi ver`")
         return
     
     # DM kontrolü
@@ -144,7 +144,7 @@ async def kodlaai(ctx, *, mesaj: str = ""):
         await ctx.send("Bir hata oluştu. Lütfen daha sonra tekrar deneyin.")
         print(f"Hata detayı - Kullanıcı: {ctx.author}, Hata: {e}")
 
-@bot.command(name='unutkafamı')
+@bot.command(name='hafızaunut')
 @commands.cooldown(1, 5, commands.BucketType.user)  # 5 saniyede 1
 async def unutkafami(ctx):
     """Konuşma geçmişini temizle"""
@@ -170,7 +170,7 @@ async def hafizam(ctx):
     memory_key = get_memory_key(ctx.guild.id, ctx.channel.id, ctx.author.id)
     
     if memory_key not in conversation_memory or not conversation_memory[memory_key]:
-        await ctx.send("Henüz bu kanalda hiçbir konuşma yapmadık! `!kodlaai` ile başlayalım.")
+        await ctx.send("Henüz bu kanalda hiçbir konuşma yapmadık! `!sor` ile başlayalım.")
         return
     
     embed = discord.Embed(
@@ -203,8 +203,8 @@ async def yardim(ctx):
         color=0x00ff00
     )
     embed.add_field(
-        name="!kodlaai [mesaj]",
-        value="AI ile sohbet et. Geçmiş konuşmaları hatırlar! Örnek: `!kodlaai Python nasıl öğrenilir?`",
+        name="!sor [mesaj]",
+        value="AI ile sohbet et. Geçmiş konuşmaları hatırlar! Örnek: `!sor Python nasıl öğrenilir?`",
         inline=False
     )
     embed.add_field(
@@ -213,7 +213,7 @@ async def yardim(ctx):
         inline=False
     )
     embed.add_field(
-        name="!unutkafamı",
+        name="!hafızaunut",
         value="Bu kanaldaki konuşma geçmişini temizler",
         inline=False
     )
