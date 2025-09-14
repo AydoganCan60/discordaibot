@@ -47,8 +47,8 @@ python-dotenv>=1.1.1
 🚀 Kurulum:
 1. Projeyi Klonlayın:
 
-git clone [repo-url]
-cd discord-ai-bot
+git clone (https://github.com/AydoganCan60/discordaibot.git)
+cd discordaibot
 
 2. Gerekli Paketleri Yükleyin:
 
@@ -68,17 +68,17 @@ python main.py
 🎮 Kullanım:
 Temel Komutlar:
 
-    !kodlaai [mesaj] - AI ile sohbet et
+    !sor [mesaj] - AI ile sohbet et
     !hafızam - Konuşma geçmişini görüntüle
-    !unutkafamı - Hafızayı temizle
+    !hafızaunut - Hafızayı temizle
     !yardım - Komut listesi
 
 Örnek Kullanım:
 
-!kodlaai Python nasıl öğrenilir?
-!kodlaai Az önce ne konuştuk?
+!sor Python nasıl öğrenilir?
+!sor Az önce ne konuştuk?
 !hafızam
-!unutkafamı
+!hafızaunut
 
 🔧 Konfigürasyon:
 Discord Bot Ayarları:
@@ -127,14 +127,7 @@ Bu proje Replit platformunda optimize edilmiştir:
 📄 Lisans:
 
 MIT License
-🆘 Destek:
-
-    Discord sunucumuz: [link]
-    Issues: GitHub Issues
-    Email: [email]
 
 🔄 Sürüm Geçmişi:
 
-    v1.0.0: Temel AI entegrasyonu
-    v1.1.0: Hafıza sistemi eklendi
-    v1.2.0: Güvenlik iyileştirmeleri
+    v1.0.0: En Son Sürüm
